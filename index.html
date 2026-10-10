@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rudra Hosting</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b1020;color:white;font-family:Arial,sans-serif}
+header{padding:22px;background:#151e30;text-align:center;font-size:25px;font-weight:bold;color:#42e98b}
+main{max-width:500px;margin:35px auto;padding:18px}
+.card{background:#172238;border:1px solid #2c3b52;border-radius:16px;padding:22px;margin:20px 0}
+h1{text-align:center;font-size:27px}
+p{color:#bdc9d9}
+button{width:100%;padding:14px;margin:7px 0;border:0;border-radius:9px;font-size:16px;font-weight:bold}
+.start{background:#35d782;color:#07130c}
+.stop{background:#ff6464;color:#210707}
+input{width:100%;padding:13px;border-radius:8px;border:1px solid #46536a;background:#0b1020;color:white}
+footer{text-align:center;color:#8895aa;padding:20px}
+</style>
+</head>
+<body>
+<header>⛏ RUDRA HOSTING</header>
+<main>
+<h1>Your Minecraft World Starts Here!</h1>
+<p style="text-align:center">Free Bedrock / MCPE Hosting</p>
+<div class="card">
+<h2>🎮 Create Your Server</h2>
+<label>Server Name</label><br><br>
+<input id="server" placeholder="My Minecraft World">
+<br><br>
+<button class="start" onclick="createServer()">Create Server</button>
+<p id="result">No server created yet.</p>
+</div>
+<div class="card">
+<h2>🌍 Server Dashboard</h2>
+<p>Edition: Minecraft Bedrock</p>
+<p>Status: Demo Mode</p>
+<button class="start" onclick="alert('Connect a real hosting backend first!')">▶ Start Server</button>
+<button class="stop" onclick="alert('Connect a real hosting backend first!')">■ Stop Server</button>
+</div>
+</main>
+<footer>Rudra Hosting © 2026</footer>
+<script>
+function createServer(){
+let name=document.getElementById('server').value.trim();
+if(!name){alert('Enter a server name!');return;}
+document.getElementById('result').textContent=
+'Server "'+name+'" added in demo mode. Real hosting is not connected yet.';
+}
+</script>
+</body>
+</html>
